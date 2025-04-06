@@ -1,4 +1,5 @@
 'use client';
+import { FaBars } from 'react-icons/fa';
 import styles from './components.module.css';
 
 const Navigation = () => {

@@ -7,7 +7,6 @@ const Header = () => {
         <div>
             <Header>
                 <Navigation />
-                <img src="logo.png" alt="Logo" />
                 <Notifications />
                 <input />
             </Header>
