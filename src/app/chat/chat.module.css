@@ -22,7 +22,7 @@
     margin-right: 10px;
 }
 
-input:focus {
+.input-container input:focus {
     outline: none;
     border-color: #0070f3;
 }
