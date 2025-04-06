@@ -1,0 +1,28 @@
+.chat-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.chat-box {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.message {
+    margin: 5px 0;
+}
+
+.input-container {
+    margin-top: 10px;
+}
+
+.input-container input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0070f3;
+}

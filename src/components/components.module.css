@@ -1,0 +1,25 @@
+.navbarContainer {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Space between items */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333; /* Change to your preferred color */
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
