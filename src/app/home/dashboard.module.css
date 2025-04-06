@@ -1,0 +1,75 @@
+/* dashboard.module.css */
+
+.dashboardContainer {
+    max-width: 600px;
+    margin: 20px auto; /* Center the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* White background */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.dashboardContainer h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #28a745; /* Primary green color */
+    margin: 20px 0 10px; /* Spacing for headings */
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+.dashboardContainer ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    width: 100%; /* Full width */
+}
+
+.tutorList, .studentList, .sessionList {
+    width: 100%; /* Full width for lists */
+    margin-bottom: 20px; /* Spacing between lists */
+}
+
+.tutorItem, .studentItem, .sessionItem {
+    background-color: #f8f9fa; /* Light background for items */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px; /* Spacing between items */
+    transition: background-color 0.3s;
+}
+
+.tutorItem:hover, .studentItem:hover, .sessionItem:hover {
+    background-color: #e2f0e5; /* Light green on hover */
+}
+
+.quickActions {
+    margin-top: 30px; /* Spacing above quick actions */
+    width: 100%; /* Full width */
+}
+
+.actionButton {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Full width button */
+    margin-bottom: 10px; /* Spacing between buttons */
+    transition: background-color 0.3s;
+}
+
+.actionButton:hover {
+    background-color: #1e7e34; /* Darker green on hover */
+}
+
+@media (max-width: 600px) {
+    .dashboardContainer h2 {
+        font-size: 1.25rem; /* Adjust heading size for mobile */
+    }
+
+    .actionButton {
+        font-size: 14px; /* Adjust button size for mobile */
+    }
+}
