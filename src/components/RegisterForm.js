@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { auth } from './firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import styles from '../styles/home.module.css';
+import styles from './forms.module.css';
 
 export default function RegisterForm() {
   const [email, setEmail] = useState('');

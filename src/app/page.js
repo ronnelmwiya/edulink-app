@@ -16,8 +16,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>Welcome to Edulink</h1>
+      <img src="logo.png" />
       {isLogin ? <LoginForm /> : <RegisterForm />}
-      <button onClick={toggleForm}>
+      <button className={styles.homeButton} onClick={toggleForm}>
         {isLogin ? 'Switch to Register' : 'Switch to Login'}
       </button>
     </div>

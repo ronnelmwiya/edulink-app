@@ -1,0 +1,79 @@
+/* forms.module.css */
+
+.formContainer {
+    max-width: 400px;
+    margin: 20px auto; /* Center the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* White background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContainer h2 {
+    font-family: 'Arial', sans-serif;
+    color: var(--background);
+    margin-bottom: 7px;
+}
+
+.formContainer p {
+    font-family: 'Arial', sans-serif;
+    color: var(--background);
+    margin: 10px 0;
+}
+.formContainer form {
+    width: 100%;
+}
+
+.formContainer input {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    color: var(--background);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.formContainer input:focus {
+    border-color: #28a745; /* Focus color */
+    outline: none;
+}
+
+.formContainer button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color); /* Primary color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.formContainer button:hover {
+    background-color: #137334; /* Darker shade on hover */
+}
+
+.googleButton {
+    background-color: #db4437; /* Google red */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.googleButton:hover {
+    background-color: #c13527; /* Darker shade on hover */
+}
+
+.error {
+    color: #ff4d4d;
+    margin-top: 10px;
+    font-size: 14px;
+}

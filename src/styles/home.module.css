@@ -1,0 +1,37 @@
+/* home.module.css */
+
+.container {
+    margin: 10px auto; /* Center the container */
+    padding: 0 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--primary-color); /* Primary green color */
+    margin-bottom: 5px;
+}
+
+.container img {
+    background-color: var(--accent-color);
+    width: 50px;
+    height: auto;
+}
+
+.homebutton {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.homeButton:hover {
+    color: var(--accent-color); /* Darker green on hover */
+}

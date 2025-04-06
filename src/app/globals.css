@@ -1,42 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import "tailwindcss";
 
-
 :root {
-  --background:#f5f5f5; /* Off-White */
+  --background: #f5f5f5; /* Off-White */
   --foreground: #2f4f4f; /* Dark Slate */
-  --accent-color: #f9e8b8; /* Pale Yellow */
-  --secondary-color: #f3bba0; /*Light Coral */
-  --primary-color: #a4d8e1; /* Soft Blue */ 
-  
+  --accent-color: #98e3b4; /* Light Green */
+  --secondary-color: #f3bba0; /* Light Coral */
+  --primary-color: #28a745; /* Green */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Roboto', Arial, Helvetica, sans-serif; /* Updated to use Roboto */
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f5f5f5;
-    --foreground: #2f4f4f;
+    --background: #2f4f4f; /* Dark Slate */
+    --foreground: #f5f5f5; /* Off-White */
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; /* Ensure Roboto is used */
 }
 
-
-button {
-  background-color: var(--primary-color);
-  color: var(--foreground);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-}

@@ -5,7 +5,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { auth, googleProvider } from './firebase';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import styles from '../styles/home.module.css';
+import { FaGoogle } from 'react-icons/fa';
+import styles from './forms.module.css';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -55,8 +56,9 @@ export default function LoginForm() {
         />
         <button type="submit">Login</button>
       </form>
+      <p>Or</p>
       <button onClick={handleGoogleSignIn} className={styles.googleButton}>
-        Sign in with Google
+        <FaGoogle /> Sign in with Google
       </button>
       {error && <p className={styles.error}>{error}</p>}
     </div>
