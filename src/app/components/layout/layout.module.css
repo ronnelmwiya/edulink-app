@@ -1,0 +1,220 @@
+.header {
+    background-color: var(--primary-color);
+    color: var(--foreground);
+    padding: 15px; /* Tailwind's p-4 */
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem; /* Tailwind's space-x-4 */
+    font-size: 1rem; 
+    font-weight: bold;
+}
+
+.mobileMenuContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mobileMenu {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 10px;
+    z-index: 5000;
+    right: 0;
+    top: 25px;
+    padding: 15px;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+.mobileMenuButton {
+    display: none;
+    padding: 0;
+}
+
+.desktopNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.navLink {
+    transition: color 0.2s;
+}
+
+.navLink:hover {
+    color: var(--secondary-color); /* Tailwind's hover:text-secondary-color */
+}
+
+.navHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.profileContainer {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.profileIcon {
+    transition: transform 0.3s ease;
+}
+
+.profileIcon:hover {
+    transform: scale(1.05);
+    color: var(--secondary-color);
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    z-index: 3;
+}
+
+.navLink {
+    position: relative; /* Position relative for absolute positioning of dropdowns */
+}
+.playButton {
+    background-color: var(--primary-color);
+    color: var(--foreground);
+    padding: 0.5rem 1rem; /* Tailwind's px-4 py-2 */
+    border-radius: 0.25rem; /* Tailwind's rounded */
+    transition: background-color 0.2s;
+}
+
+.playButton:hover {
+    background-color: var(--secondary-color); /* Tailwind's hover;bg-secondary-color */
+}
+
+
+
+/* ====================================================================FOOTER================================================================= */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--foreground);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footerNav {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 0 1rem;
+}
+
+.footerLink {
+    color: var(--foreground);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footerLink:hover {
+    color: var(--secondary-color);
+}
+
+.socialMedia {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 1rem 0 0;
+}
+
+.socialIcon {
+    color: var(--foreground);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footerBottom {
+    background-color: var(--foreground);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.copyright {
+    font-size: 1rem;
+}
+
+@media (max-width: 840px) {
+    .header {
+        flex-direction: column;
+        position: fixed;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .mobileMenuButton {
+        display: block;
+    }
+
+    .desktopNav {
+        display: none;
+    }
+
+    .navLink {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .profileContainer {
+        justify-content: center;
+        color: var(--primary-color);
+    }
+
+    .headerBottom {
+        background-color: var(--foreground);
+        position: absolute;
+        bottom: -35px;
+        padding: 5px 15px; 
+    }
+
+    .profileIcon:hover {
+        color: var(--primary-color);
+    }
+}
