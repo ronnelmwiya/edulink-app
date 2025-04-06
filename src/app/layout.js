@@ -1,4 +1,4 @@
-import { UserProvider } from './context/userContext';
+import { UserProvider } from '../context/userContext';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
