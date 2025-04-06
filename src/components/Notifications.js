@@ -1,11 +1,13 @@
 'use client';
 import { FaBell } from 'react-icons/fa';
-import styles from './components.module.css';
+import styles from '../styles/notification.module.css';
 
 const Notifications = () => {
     return (
-        <div>
-            <FaBell />            
+        <div className={styles.notificationContainer}>
+            <div>
+                <FaBell size={24} />
+            </div>          
         </div>
     );
 };

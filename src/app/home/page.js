@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
+import Header from '../../components/Header.js';
 import styles from './dashboard.module.css'; // Assuming you have styles for the dashboard
 
 const HomeDashboard = () => {
@@ -27,7 +27,7 @@ const HomeDashboard = () => {
 
     return (
         <div className={styles.dashboardContainer}>
-            
+            <Header />
             <h2>Available Tutors</h2>
             <ul className={styles.tutorList}>
                 {tutors.map((tutor) => (

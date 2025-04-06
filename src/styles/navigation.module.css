@@ -1,0 +1,57 @@
+/* components.module.css */
+
+.navbarContainer {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.menuIcon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar {
+    position: absolute;
+    top: 70px; /* Position below the menu icon */
+    right:  10;
+    background-color: var(--primary-color); /* Darker background for dropdown */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 280px;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navItem {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--accent-color); /* Divider between items */
+}
+
+.navItem:last-child {
+    border-bottom: none; /* Remove last item's border */
+}
+
+.navItem a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Makes the entire area clickable */
+}
+
+.navItem a:hover {
+    background-color: #555; /* Change background on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .navbar {
+        width: 100%; /* Full width for mobile */
+    }
+}
