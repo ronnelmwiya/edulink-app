@@ -5,11 +5,9 @@ import Notifications from './Notifications.js';
 const Header = () => {
     return (
         <div>
-            <Header>
-                <Navigation />
-                <Notifications />
-                <input />
-            </Header>
+            <Navigation />
+            <Notifications />
+            <input />
         </div>
     )
 }
