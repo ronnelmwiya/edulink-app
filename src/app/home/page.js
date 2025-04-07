@@ -8,7 +8,9 @@ const HomeDashboard = () => {
     const [tutors, setTutors] = useState([]);
     const [students, setStudents] = useState([]);
     const [ongoingSessions, setOngoingSessions] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTermTutor, setSearchTermTutor] = useState('');
+    const [searchTermStudent, setSearchTermStudent] = useState('');
+    const [searchTermSession, setSearchTermSession] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,7 +27,15 @@ const HomeDashboard = () => {
     }, []);
 
     const filteredTutors = tutors.filter(tutor =>
-        tutor.name.toLowerCase().includes(searchTerm.toLowerCase())
+        tutor.name.toLowerCase().includes(searchTermTutor.toLowerCase())
+    );
+
+    const filteredStudents = students.filter(student =>
+        student.name.toLowerCase().includes(searchTermStudent.toLowerCase())
+    );
+
+    const filteredSessions = ongoingSessions.filter(session =>
+        session.topic.toLowerCase().includes(searchTermSession.toLowerCase())
     );
 
     return (
@@ -36,8 +46,8 @@ const HomeDashboard = () => {
                 type="text"
                 placeholder="Search tutors..."
                 className={styles.searchBar}
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                value={searchTermTutor}
+                onChange={(e) => setSearchTermTutor(e.target.value)}
             />
             <ul className={styles.tutorList}>
                 {filteredTutors.map((tutor) => (
@@ -52,8 +62,15 @@ const HomeDashboard = () => {
             </ul>
 
             <h2>Available Students</h2>
+            <input
+                type="text"
+                placeholder="Search students..."
+                className={styles.searchBar}
+                value={searchTermStudent}
+                onChange={(e) => setSearchTermStudent(e.target.value)}
+            />
             <ul className={styles.studentList}>
-                {students.map((student) => (
+                {filteredStudents.map((student) => (
                     <li key={student.id} className={styles.studentItem}>
                         <img src={student.profilePic} alt={student.name} className={styles.profilePic} />
                         <div className={styles.studentDetails}>
@@ -65,8 +82,15 @@ const HomeDashboard = () => {
             </ul>
 
             <h2>Ongoing Sessions</h2>
+            <input
+                type="text"
+                placeholder="Search sessions..."
+                className={styles.searchBar}
+                value={searchTermSession}
+                onChange={(e) => setSearchTermSession(e.target.value)}
+            />
             <ul className={styles.sessionList}>
-                {ongoingSessions.map((session) => (
+                {filteredSessions.map((session) => (
                     <li key={session.id} className={styles.sessionItem}>
                         <div className={styles.sessionDetails}>
                             <h3>{session.topic}</h3>
@@ -88,25 +112,25 @@ const HomeDashboard = () => {
 // Sample data fetching functions (replace these with your actual API calls)
 const fetchTutors = async () => {
     return [
-        { id: 1, name: 'John Doe', subject: 'Math', profilePic: '/pictures/pic1.jpg' },
-        { id: 2, name: 'Jane Smith', subject: 'Science', profilePic: '/pictures/pic2.jpg' },
-        { id: 3, name: 'Emily Johnson', subject: 'History', profilePic: '/pictures/pic3.jpg' },
-        { id: 4, name: 'Michael Brown', subject: 'English', profilePic: '/pictures/pic4.jpg' },
-        { id: 5, name: 'Rachel Green', subject: 'Biology', profilePic: '/pictures/pic5.jpg' },
-        { id: 6, name: 'Ross Geller', subject: 'Physics', profilePic: '/pictures/pic6.jpg' },
-        { id: 7, name: 'Chandler Bing', subject: 'Drama', profilePic: '/pictures/pic7.jpg' },
+        { id: 1, name: 'Tjipuka Ndjoze', subject: 'Math', profilePic: 'pic4.jpg' },
+        { id: 2, name: 'Sakaria Shikongo', subject: 'Science', profilePic: 'pic5.jpg' },
+        { id: 3, name: 'Maria Kapenda', subject: 'History', profilePic: 'pic6.jpg' },
+        { id: 4, name: 'Elia Tjivinda', subject: 'English', profilePic: 'pic7.jpg' },
+        { id: 5, name: 'Nerina Ndeitunga', subject: 'Biology', profilePic: 'pic1.jpg' },
+        { id: 6, name: 'Hendrik Garoeb', subject: 'Physics', profilePic: 'pic2.jpg' },
+        { id: 7, name: 'Lydia Nghipondoka', subject: 'Drama', profilePic: 'pic3.jpg' },
     ];
 };
 
 const fetchStudents = async () => {
     return [
-        { id: 1, name: 'Alice Johnson', grade: '8th', profilePic: '/pictures/pic1.jpg' },
-        { id: 2, name: 'Bob Brown', grade: '10th', profilePic: '/pictures/pic2.jpg' },
-        { id: 3, name: 'Charlie White', grade: '9th', profilePic: '/pictures/pic3.jpg' },
-        { id: 4, name: 'Diana Prince', grade: '11th', profilePic: '/pictures/pic4.jpg' },
-        { id: 5, name: 'Ethan Hunt', grade: '12th', profilePic: '/pictures/pic5.jpg' },
-        { id: 6, name: 'Fiona Gallagher', grade: '7th', profilePic: '/pictures/pic6.jpg' },
-        { id: 7, name: 'George Clooney', grade: '10th', profilePic: '/pictures/pic7.jpg' },
+        { id: 1, name: 'Anna Kambowe', grade: '8th', profilePic: 'pic2.jpg' },
+        { id: 2, name: 'Jonas Amukoto', grade: '10th', profilePic: 'pic1.jpg' },
+        { id: 3, name: 'Selma Mupetami', grade: '9th', profilePic: 'pic3.jpg' },
+        { id: 4, name: 'Tafara Nguvumali', grade: '11th', profilePic: 'pic4.jpg' },
+        { id: 5, name: 'Kabelo Ndeitunga', grade: '12th', profilePic: 'pic5.jpg' },
+        { id: 6, name: 'Pius Kambunda', grade: '7th', profilePic: 'pic6.jpg' },
+        { id: 7, name: 'Rina Shikongo', grade: '10th', profilePic: 'pic7.jpg' },
     ];
 };
 

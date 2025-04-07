@@ -1,6 +1,7 @@
 /* dashboard.module.css */
 
 .dashboardContainer {
+    color: #2f4f4f;
     max-width: 600px;
     margin: 20px auto; /* Center the container */
     padding: 30px 20px 0 20px;
@@ -27,15 +28,30 @@
 
 .tutorList, .studentList, .sessionList {
     display: flex; /* Use flexbox */
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow: auto; /* Allow scrolling */
     padding: 10px 0; /* Vertical padding */
-    margin-bottom: 20px; /* Spacing between lists */
+    margin-bottom: 10px; /* Spacing between lists */
+    padding-right: 10px; /* Prevent content from being hidden */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.tutorList::-webkit-scrollbar,
+.studentList::-webkit-scrollbar,
+.sessionList::-webkit-scrollbar {
+    width: 0; /* Hide scrollbar */
+    background: transparent; /* Ensure background is transparent */
+}
+
+/* Hide scrollbar for Firefox */
+.tutorList, .studentList, .sessionList {
+    overflow: -moz-scrollbars-none; /* For Firefox */
+    scrollbar-width: none; /* For Firefox */
 }
 
 .tutorItem, .studentItem {
     background-color: #f8f9fa; /* Light background for items */
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px 10px;
     margin-right: 10px; /* Spacing between items */
     min-width: 150px; /* Minimum width for items */
     flex-shrink: 0; /* Prevent items from shrinking */
