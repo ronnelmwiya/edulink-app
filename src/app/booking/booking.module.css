@@ -1,15 +1,69 @@
-.booking-container {
+/* booking.module.css */
+
+.bookingContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Roboto', sans-serif; /* Modern font */
 }
 
-.date-time-picker {
-    margin-bottom: 10px;
+.bookingContainer h2 {
+    font-size: 2rem; /* Heading size */
+    color: #28a745; /* Green color for headings */
+    margin-bottom: 20px; /* Spacing below heading */
+    text-align: center; /* Centered text */
 }
 
-.error-message {
-    margin: 10px 0;
-    color: red;
+.dateTimePicker {
+    margin-bottom: 20px; /* Spacing below the date/time picker */
+}
+
+.bookingContainer label {
+    display: block; /* Block display for label */
+    margin-bottom: 8px; /* Spacing below label */
+    font-size: 1rem; /* Font size for labels */
+    color: #333; /* Dark text color */
+}
+
+.bookingContainer input[type="datetime-local"] {
+    width: 100%; /* Full width input */
+    padding: 12px; /* Padding for input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for input */
+    transition: border-color 0.3s; /* Smooth transition on focus */
+}
+
+.bookingContainer input[type="datetime-local"]:focus {
+    outline: none; /* Remove outline */
+    border-color: #28a745; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Subtle shadow */
+}
+
+.errorMessage {
+    color: #dc3545; /* Red color for error message */
+    margin-top: 10px; /* Spacing above error message */
+    text-align: center; /* Centered text for errors */
+}
+
+.bookingContainer button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Button padding */
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.bookingContainer button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
 }

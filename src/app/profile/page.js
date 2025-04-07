@@ -1,4 +1,4 @@
-'use client';
+'use client';import { useRouter } from 'next/navigation';
 import Header from '../../components/Header.js';
 import styles from './profile.module.css';
 
@@ -19,10 +19,20 @@ const Profile = () => {
       ],
   };
 
+  const router = useRouter();
+
+  const toggleChat = () => {
+    router.push('/chat');
+  }
+
+  const toggleSession = () => {
+    router.push('/booking');
+  }
+
   return (
     <div className={styles.profileContainer}>
         <Header />
-        <div><img src={tutor.picture} className={styles.profileImage}/><h2>{tutor.name}</h2></div>
+        <div className={styles.profileDetailsContainer}><img src={tutor.picture} className={styles.profileImage}/><h2>{tutor.name}</h2></div>
         <p><strong>Expertise:</strong> {tutor.expertise}</p>
         
         <h3>Reviews</h3>
@@ -45,8 +55,8 @@ const Profile = () => {
 
         <h3>Contact Options</h3>
         <div className={styles.contactOptions}>
-            <button className={styles.contactButton}>Message Tutor</button>
-            <button className={styles.contactButton}>Schedule a Session</button>
+            <button className={styles.contactButton} onClick={toggleChat}>Message Tutor</button>
+            <button className={styles.contactButton} onClick={toggleSession}>Schedule a Session</button>
         </div>
     </div>
   );

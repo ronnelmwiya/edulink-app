@@ -14,7 +14,7 @@
 }
 
 .dashboardContainer input {
-    background-color: var(--accent-color);
+    color: var(--accent-color);
     margin-bottom: 7px;
     border-radius: 7px;
     padding: 0 0 0 7px;

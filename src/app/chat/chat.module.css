@@ -18,9 +18,9 @@
     background-color: var(--accent-color); /* Light gray background */
     border-radius: 10px; /* Rounded corners */
     padding: 15px; /* Padding inside the chat box */
-    height: 400px; /* Fixed height for chat box */
+    height: 350px; /* Fixed height for chat box */
     overflow-y: auto; /* Enable vertical scrolling */
-    margin-bottom: 15px; /* Spacing below chat box */
+    margin: 60px 0 15px 0; /* Spacing below chat box */
 }
 
 .message {

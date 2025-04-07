@@ -18,8 +18,8 @@ const ChatScreen = () => {
     return (
         <div className={styles.chatContainer}>
             <Header />
-            <h2 className={styles.title}>Chat with Tutor</h2>
             <div className={styles.chatBox}>
+                <h2 className={styles.title}>Chat with Tutor</h2>
                 {messages.map((msg, index) => (
                     <div key={index} className={`${styles.message} ${msg.sender}`}>
                         <span className="font-bold">{msg.sender}: </span>

@@ -2,7 +2,7 @@
 
 .profileContainer {
     max-width: 800px;
-    margin: 60px auto 0 auto; /* Center the container */
+    margin: auto; /* Center the container */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -10,11 +10,18 @@
     font-family: 'Roboto', sans-serif; /* Font family */
 }
 
+.profileDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 80px;
+}
 .profileImage {
     display: flex;
     width: 100%;
     height: auto;
     border-radius: 7px;
+    top: 5px;
 }
 
 .profileContainer h2 {

@@ -24,14 +24,14 @@
 
 .navbar {
     position: absolute;
-    top: 70px; /* Position below the menu icon */
+    top: 80px; /* Position below the menu icon */
     right:  10px;
     left: 10px;
     background-color: var(--primary-color); /* Darker background for dropdown */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    width: 90vw;
+    max-width: 90vw;
 }
 
 .navList {

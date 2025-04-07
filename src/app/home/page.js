@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Header from '../../components/Header.js';
 import styles from './dashboard.module.css'; // Assuming you have styles for the dashboard
 
@@ -11,6 +12,7 @@ const HomeDashboard = () => {
     const [searchTermTutor, setSearchTermTutor] = useState('');
     const [searchTermStudent, setSearchTermStudent] = useState('');
     const [searchTermSession, setSearchTermSession] = useState('');
+    const router = useRouter();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,6 +27,10 @@ const HomeDashboard = () => {
 
         fetchData();
     }, []);
+
+    const toggleProfile = () => {
+        router.push('/profile');
+    }
 
     const filteredTutors = tutors.filter(tutor =>
         tutor.name.toLowerCase().includes(searchTermTutor.toLowerCase())
@@ -51,7 +57,7 @@ const HomeDashboard = () => {
             />
             <ul className={styles.tutorList}>
                 {filteredTutors.map((tutor) => (
-                    <li key={tutor.id} className={styles.tutorItem}>
+                    <li key={tutor.id} className={styles.tutorItem} onClick={toggleProfile}>
                         <img src={tutor.profilePic} alt={tutor.name} className={styles.profilePic} />
                         <div className={styles.tutorDetails}>
                             <h3>{tutor.name}</h3>
