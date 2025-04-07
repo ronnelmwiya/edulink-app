@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { FaPaperPlane } from 'react-icons/fa';
 import Header from '../../components/Header.js';
 import styles from './chat.module.css';
 
@@ -39,7 +40,7 @@ const ChatScreen = () => {
                     className={styles.contactButton}
                     onClick={handleSendMessage}
                 >
-                    Send
+                    <FaPaperPlane size={25}/>
                 </button>
             </div>
             <button 

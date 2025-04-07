@@ -43,6 +43,7 @@
 .inputContainer {
     display: flex; /* Flexbox for input area */
     align-items: center; /* Center items vertically */
+    gap: 15px;
 }
 
 .inputContainer input {
