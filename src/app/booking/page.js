@@ -21,9 +21,9 @@ const BookingSession = () => {
     };
 
     return (
-        <div className="booking-container">
+        <div className="bookingContainer">
             <h2>Book a Session</h2>
-            <div className="date-time-picker">
+            <div className="dateTimePicker">
                 <label htmlFor="dateTime">Select Date and Time:</label>
                 <input 
                     type="datetime-local" 
@@ -33,7 +33,7 @@ const BookingSession = () => {
                     className="border p-2"
                 />
             </div>
-            {error && <p className="error-message text-red-500">{error}</p>}
+            {error && <p className="errorMessage text-red-500">{error}</p>}
             <button 
                 className="p-2 bg-green-500 text-white rounded" 
                 onClick={handleBooking}

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Header from '../../components/Header.js';
 import styles from './chat.module.css';
 
 const ChatScreen = () => {
@@ -16,6 +17,7 @@ const ChatScreen = () => {
 
     return (
         <div className={styles.chatContainer}>
+            <Header />
             <h2 className={styles.title}>Chat with Tutor</h2>
             <div className={styles.chatBox}>
                 {messages.map((msg, index) => (
