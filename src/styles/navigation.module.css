@@ -3,8 +3,6 @@
 .navbarContainer {
     display: flex;
     align-items: center;
-    background-color: var(--primary-color);
-    padding: 10px;
 }
 
 .menuIcon {
@@ -13,9 +11,20 @@
     cursor: pointer;
 }
 
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
+    top: 0;
+    left: 0;
+}
+
 .navbar {
     position: absolute;
-    top: 70px; /* Position below the menu icon */
+    top: 60px; /* Position below the menu icon */
     right:  10;
     background-color: var(--primary-color); /* Darker background for dropdown */
     border-radius: 8px;

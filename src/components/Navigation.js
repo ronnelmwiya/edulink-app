@@ -16,17 +16,20 @@ const Navigation = () => {
                 <FaBars />
             </div>
             {isOpen && (
-                <nav className={styles.navbar}>
-                    <ul className={styles.navList}>
-                        <li className={styles.navItem}><a href="/profile">My Profile</a></li>
-                        <li className={styles.navItem}><a href="/courses">My Courses</a></li>
-                        <li className={styles.navItem}><a href="/favourites">Favourite Courses</a></li>
-                        <li className={styles.navItem}><a href="/notifications">Notifications</a></li>
-                        <li className={styles.navItem}><a href="/downloads">Downloads</a></li>
-                        <li className={styles.navItem}><a href="/support">Customer Support</a></li>
-                        <li className={styles.navItem}><a href="/settings">Settings</a></li>
-                    </ul>
-                </nav>
+                <div>
+                    <div className={styles.overlay}></div>
+                    <nav className={styles.navbar}>
+                        <ul className={styles.navList}>
+                            <li className={styles.navItem}><a href="/profile">My Profile</a></li>
+                            <li className={styles.navItem}><a href="/courses">My Courses</a></li>
+                            <li className={styles.navItem}><a href="/favourites">Favourite Courses</a></li>
+                            <li className={styles.navItem}><a href="/notifications">Notifications</a></li>
+                            <li className={styles.navItem}><a href="/downloads">Downloads</a></li>
+                            <li className={styles.navItem}><a href="/support">Customer Support</a></li>
+                            <li className={styles.navItem}><a href="/settings">Settings</a></li>
+                        </ul>
+                    </nav>
+                </div>
             )}
         </div>
     );
