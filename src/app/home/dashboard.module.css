@@ -1,6 +1,7 @@
 /* dashboard.module.css */
 
 .dashboardContainer {
+    background-color: var(--container-background);
     color: #2f4f4f;
     max-width: 600px;
     margin: 20px auto; /* Center the container */

@@ -1,0 +1,71 @@
+/* profile.module.css */
+
+.profileContainer {
+    max-width: 800px;
+    margin: 60px auto 0 auto; /* Center the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--container-background); /* White background */
+    font-family: 'Roboto', sans-serif; /* Font family */
+}
+
+.profileImage {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.profileContainer h2 {
+    font-size: 2rem; /* Heading size */
+    color: #28a745; /* Primary green color */
+    margin-bottom: 10px;
+}
+
+.profileContainer p {
+    font-size: 1.2rem; /* Paragraph size */
+    margin-bottom: 20px;
+}
+
+.profileContainer h3 {
+    font-size: 1.5rem; /* Subheading size */
+    margin-top: 20px; /* Spacing above subheadings */
+    margin-bottom: 10px; /* Spacing below subheadings */
+}
+
+.reviewList, .availabilityList {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    color: #2f4f4f;
+}
+
+.reviewItem, .availabilityItem {
+    padding: 10px;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Spacing between items */
+    background-color: #f9f9f9; /* Light background */
+}
+
+.contactOptions {
+    display: flex; /* Flexbox for buttons */
+    gap: 20px; /* Spacing between buttons */
+    margin-top: 20px; /* Spacing above buttons */
+}
+
+.contactButton {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 12px 20px; /* Padding for buttons */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Button font size */
+    transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+}
+
+.contactButton:hover {
+    background-color: #1e7e34; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}

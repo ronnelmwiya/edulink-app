@@ -1,7 +1,12 @@
+'use client';
+import Header from '../../components/Header.js';
+import styles from './profile.module.css';
+
 const Profile = () => {
   // Dummy tutor data
   const tutor = {
-      name: "John Doe",
+      name: "Tjipuka Ndjoze",
+      picture: "pic4.jpg",
       expertise: "Mathematics, Physics",
       reviews: [
           { username: "Alice", comment: "Great tutor!", rating: 5 },
@@ -15,34 +20,35 @@ const Profile = () => {
   };
 
   return (
-      <div className="profile-container">
-          <h2>{tutor.name}</h2>
-          <p><strong>Expertise:</strong> {tutor.expertise}</p>
-          
-          <h3>Reviews</h3>
-          <ul className="review-list">
-              {tutor.reviews.map((review, index) => (
-                  <li key={index} className="review-item">
-                      <strong>{review.username}:</strong> {review.comment} <em>({review.rating} stars)</em>
-                  </li>
-              ))}
-          </ul>
+    <div className={styles.profileContainer}>
+        <Header />
+        <div><img src={tutor.picture} className={styles.profileImage}/><h2>{tutor.name}</h2></div>
+        <p><strong>Expertise:</strong> {tutor.expertise}</p>
+        
+        <h3>Reviews</h3>
+        <ul className={styles.reviewList}>
+            {tutor.reviews.map((review, index) => (
+                <li key={index} className={styles.reviewItem}>
+                    <strong>{review.username}:</strong> {review.comment} <em>({review.rating} stars)</em>
+                </li>
+            ))}
+        </ul>
 
-          <h3>Availability</h3>
-          <ul className="availability-list">
-              {tutor.availability.map((timeSlot, index) => (
-                  <li key={index} className="availability-item">
-                      {timeSlot}
-                  </li>
-              ))}
-          </ul>
+        <h3>Availability</h3>
+        <ul className={styles.availabilityList}>
+            {tutor.availability.map((timeSlot, index) => (
+                <li key={index} className={styles.availabilityItem}>
+                    {timeSlot}
+                </li>
+            ))}
+        </ul>
 
-          <h3>Contact Options</h3>
-          <div className="contact-options">
-              <button className="contact-button">Message Tutor</button>
-              <button className="contact-button">Schedule a Session</button>
-          </div>
-      </div>
+        <h3>Contact Options</h3>
+        <div className={styles.contactOptions}>
+            <button className={styles.contactButton}>Message Tutor</button>
+            <button className={styles.contactButton}>Schedule a Session</button>
+        </div>
+    </div>
   );
 };
 

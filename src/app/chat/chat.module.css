@@ -1,28 +1,92 @@
+/* chat.module.css */
+
 .chat-container {
     max-width: 600px;
     margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the chat container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    font-size: 1.8rem; /* Heading size */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Spacing below heading */
 }
 
 .chat-box {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 10px;
+    background-color: #f1f1f1; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside the chat box */
+    height: 400px; /* Fixed height for chat box */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-bottom: 15px; /* Spacing below chat box */
 }
 
 .message {
-    margin: 5px 0;
+    margin: 10px 0; /* Spacing between messages */
+    padding: 8px 12px; /* Padding for message bubbles */
+    border-radius: 20px; /* Rounded message bubbles */
+    display: inline-block; /* Inline for proper alignment */
+}
+
+.message.Student {
+    background-color: #d1e7dd; /* Light green background for student messages */
+    text-align: right; /* Align student messages to the right */
+}
+
+.message.Tutor {
+    background-color: #cfe2ff; /* Light blue background for tutor messages */
+    text-align: left; /* Align tutor messages to the left */
 }
 
 .input-container {
-    margin-top: 10px;
+    display: flex; /* Flexbox for input area */
+    align-items: center; /* Center items vertically */
 }
 
 .input-container input {
-    flex-grow: 1;
-    margin-right: 10px;
+    flex-grow: 1; /* Take up remaining space */
+    padding: 10px; /* Padding for input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 20px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
 .input-container input:focus {
-    outline: none;
-    border-color: #0070f3;
+    outline: none; /* Remove outline */
+    border-color: #0070f3; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 112, 243, 0.5); /* Subtle shadow effect */
+}
+
+.contact-button {
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: #0070f3; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.contact-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+.start-video-call {
+    margin-top: 15px; /* Spacing above button */
+    padding: 10px 20px; /* Padding for button */
+    background-color: #dc3545; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.start-video-call:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
 }
