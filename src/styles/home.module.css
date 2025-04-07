@@ -24,9 +24,9 @@
     height: auto;
 }
 
-.homebutton {
-    background-color: rgba(0, 0, 0, 0.0);
-    color: var(--accent-color);
+.homeButton {
+    background-color: none;
+    color: var(--primary-color);
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -34,5 +34,5 @@
 }
 
 .homeButton:hover {
-    color: var(--primary-color); /* Darker green on hover */
+    color: var(--accent-color); /* Darker green on hover */
 }
