@@ -15,32 +15,35 @@ const ChatScreen = () => {
     };
 
     return (
-        <div className="chat-container p-4">
-            <h2 className="text-xl">Chat with Tutor</h2>
-            <div className="chat-box border border-gray-300 rounded p-2 h-64 overflow-y-auto mb-2">
+        <div className={styles.chatContainer}>
+            <h2 className={styles.title}>Chat with Tutor</h2>
+            <div className={styles.chatBox}>
                 {messages.map((msg, index) => (
-                    <div key={index} className={`message ${msg.sender === 'Student' ? 'text-right' : 'text-left'}`}>
+                    <div key={index} className={`${styles.message} ${msg.sender}`}>
                         <span className="font-bold">{msg.sender}: </span>
                         {msg.text}
                     </div>
                 ))}
             </div>
-            <div className="input-container flex">
+            <div className={styles.inputContainer}>
                 <input
                     type="text"
-                    className="border rounded p-2 flex-grow"
+                    className={styles.input}
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     placeholder="Type your message..."
                 />
                 <button
-                    className="p-2 bg-blue-500 text-white rounded ml-2"
+                    className={styles.contactButton}
                     onClick={handleSendMessage}
                 >
                     Send
                 </button>
             </div>
-            <button className="mt-4 p-2 bg-red-500 text-white rounded" onClick={() => alert('Starting Video Call...')}>
+            <button 
+                className={styles.startVideoCall} 
+                onClick={() => alert('Starting Video Call...')}
+            >
                 Start Video Call
             </button>
         </div>
