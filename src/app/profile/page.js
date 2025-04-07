@@ -1,4 +1,7 @@
-'use client';import { useRouter } from 'next/navigation';
+'use client';
+
+import { useRouter } from 'next/navigation';
+import { FaStar } from 'react-icons/fa'; // Import star icon
 import Header from '../../components/Header.js';
 import styles from './profile.module.css';
 
@@ -32,14 +35,22 @@ const Profile = () => {
   return (
     <div className={styles.profileContainer}>
         <Header />
-        <div className={styles.profileDetailsContainer}><img src={tutor.picture} className={styles.profileImage}/><h2>{tutor.name}</h2></div>
+        <div className={styles.profileDetailsContainer}>
+            <img src={tutor.picture} className={styles.profileImage} />
+            <h2>{tutor.name}</h2>
+        </div>
         <p><strong>Expertise:</strong> {tutor.expertise}</p>
         
         <h3>Reviews</h3>
         <ul className={styles.reviewList}>
             {tutor.reviews.map((review, index) => (
                 <li key={index} className={styles.reviewItem}>
-                    <strong>{review.username}:</strong> {review.comment} <em>({review.rating} stars)</em>
+                    <strong>{review.username}:</strong> {review.comment} 
+                    <span>
+                        {Array.from({ length: 5 }, (_, i) => (
+                            <FaStar key={i} color={i < review.rating ? '#FFD700' : '#ccc'} />
+                        ))}
+                    </span>
                 </li>
             ))}
         </ul>
