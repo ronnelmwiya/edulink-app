@@ -46,7 +46,7 @@ const Profile = () => {
             {tutor.reviews.map((review, index) => (
                 <li key={index} className={styles.reviewItem}>
                     <strong>{review.username}:</strong> {review.comment} 
-                    <span>
+                    <span className={styles.reviewStars}>
                         {Array.from({ length: 5 }, (_, i) => (
                             <FaStar key={i} color={i < review.rating ? '#FFD700' : '#ccc'} />
                         ))}

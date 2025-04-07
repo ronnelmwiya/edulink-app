@@ -10,6 +10,10 @@
     font-family: 'Roboto', sans-serif; /* Font family */
 }
 
+.reviewStars {
+    display: flex;
+}
+
 .profileDetailsContainer {
     display: flex;
     flex-direction: column;
