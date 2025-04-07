@@ -20,7 +20,7 @@
     padding: 15px; /* Padding inside the chat box */
     height: 350px; /* Fixed height for chat box */
     overflow-y: auto; /* Enable vertical scrolling */
-    margin: 60px 0 15px 0; /* Spacing below chat box */
+    margin: 80px 0 15px 0; /* Spacing below chat box */
 }
 
 .message {

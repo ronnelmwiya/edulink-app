@@ -5,11 +5,25 @@
     flex-direction: column;
     max-width: 500px;
     margin: auto;
-    padding: 20px;
-    background-color: #ffffff; /* White background */
+    padding: 80px 20px 20px 20px;
+    background-color: var(--container-background); /* White background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+.bookingContainer input, .bookingContainer textarea {
+    color: var(--accent-color);
+
+}
+
+.bookingContainer select {
+    background-color: var(--accent-color);
+    color: #2f4f4f;
+}
+
+.bookingContainer select:focus {
+    outline: none;
 }
 
 .bookingContainer h2 {
@@ -27,7 +41,6 @@
     display: block; /* Block display for label */
     margin-bottom: 8px; /* Spacing below label */
     font-size: 1rem; /* Font size for labels */
-    color: #333; /* Dark text color */
 }
 
 .bookingContainer input[type="datetime-local"] {
