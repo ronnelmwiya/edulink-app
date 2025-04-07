@@ -1,4 +1,3 @@
-// components/LoginForm.js
 'use client';
 
 import { useState } from 'react';
@@ -12,27 +11,34 @@ export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); // Loading state
   const router = useRouter();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
+    setLoading(true); // Start loading
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
       router.push('/home');
     } catch (err) {
       setError(err.message);
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
   const handleGoogleSignIn = async () => {
     setError('');
+    setLoading(true); // Start loading
     try {
       await signInWithPopup(auth, googleProvider);
       router.push('/home');
     } catch (err) {
       setError(err.message);
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -54,13 +60,16 @@ export default function LoginForm() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit" disabled={loading}> {/* Disable button while loading */}
+          {loading ? 'Logging in...' : 'Login'}
+        </button>
       </form>
       <p>Or</p>
-      <button onClick={handleGoogleSignIn} className={styles.googleButton}>
-        <FaGoogle /> Sign in with Google
+      <button onClick={handleGoogleSignIn} className={styles.googleButton} disabled={loading}>
+        <FaGoogle /> {loading ? 'Signing in...' : 'Sign in with Google'}
       </button>
       {error && <p className={styles.error}>{error}</p>}
+      {loading && <p className={styles.loader}>Loading...</p>} {/* Loader message */}
     </div>
   );
 }

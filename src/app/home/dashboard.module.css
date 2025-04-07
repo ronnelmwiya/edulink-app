@@ -67,7 +67,7 @@
     min-width: 150px; /* Minimum width for items */
     flex-shrink: 0; /* Prevent items from shrinking */
     display: flex; /* Flexbox for inner content */
-    align-items: center; /* Center items vertically */
+    align-items: top; /* Center items vertically */
     transition: background-color 0.3s;
 }
 
