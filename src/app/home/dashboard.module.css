@@ -3,7 +3,7 @@
 .dashboardContainer {
     max-width: 600px;
     margin: 20px auto; /* Center the container */
-    padding: 20px;
+    padding: 30px 20px 0 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     background-color: #ffffff; /* White background */
@@ -26,20 +26,52 @@
 }
 
 .tutorList, .studentList, .sessionList {
-    width: 100%; /* Full width for lists */
+    display: flex; /* Use flexbox */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px 0; /* Vertical padding */
     margin-bottom: 20px; /* Spacing between lists */
 }
 
-.tutorItem, .studentItem, .sessionItem {
+.tutorItem, .studentItem {
     background-color: #f8f9fa; /* Light background for items */
     border-radius: 5px;
     padding: 10px;
-    margin-bottom: 10px; /* Spacing between items */
+    margin-right: 10px; /* Spacing between items */
+    min-width: 150px; /* Minimum width for items */
+    flex-shrink: 0; /* Prevent items from shrinking */
+    display: flex; /* Flexbox for inner content */
+    align-items: center; /* Center items vertically */
     transition: background-color 0.3s;
 }
 
-.tutorItem:hover, .studentItem:hover, .sessionItem:hover {
+.profilePic {
+    border-radius: 50%; /* Circular profile picture */
+    width: 50px; /* Width of the profile picture */
+    height: 50px; /* Height of the profile picture */
+    margin-right: 10px; /* Spacing between picture and text */
+}
+
+.tutorDetails, .studentDetails {
+    display: flex; /* Flexbox for details */
+    flex-direction: column; /* Stack details vertically */
+}
+
+.tutorItem:hover, .studentItem:hover {
     background-color: #e2f0e5; /* Light green on hover */
+}
+
+.sessionItem {
+    background-color: #f8f9fa; /* Light background for session items */
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px; /* Spacing between items */
+    min-width: 150px; /* Minimum width for items */
+    flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+.sessionDetails {
+    display: flex; /* Flexbox for session details */
+    flex-direction: column; /* Stack details vertically */
 }
 
 .quickActions {
