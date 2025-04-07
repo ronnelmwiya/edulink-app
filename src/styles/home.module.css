@@ -1,7 +1,7 @@
 /* home.module.css */
 
 .container {
-    margin: 10px auto; /* Center the container */
+    margin: auto; /* Center the container */
     background-color: #2f4f4f;
     padding: 20px;
     border-radius: 10px;
